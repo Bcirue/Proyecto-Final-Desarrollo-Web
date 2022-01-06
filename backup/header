@@ -1,0 +1,13 @@
+    <header class="menu">
+        <label for="" class="logo">TAYLOR SWIFT</label>
+        <ul class="menu-items">
+            <li class="active"><a href="#"></a>INICIO</li>
+            <li><a href="#"></a>MÚSICA</li>
+            <li><a href="#"></a>EVENTOS</li>
+            <li><a href="#"></a>MERCH</li>
+            <li><a href="#"></a>CONTACTO</li>
+        </ul>
+        <span class="btn-menu">
+            <i class="fa fa-bars"></i>
+        </span>
+    </header>

@@ -1,0 +1,28 @@
+@import '../base/colores';
+
+/* VIDEO DESTACADO - SECCION */
+
+.video__destacado {
+	background: -webkit-linear-gradient(to right, hsla(0, 51%, 32%, 0.604), hsla(0, 50%, 44%, 0.631)), url(../images/red_taylor_concert_3.jpg);
+	background: linear-gradient(to right, hsla(0, 51%, 32%, 0.604), hsla(0, 50%, 44%, 0.631)), url(../images/red_taylor_concert_3.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	width: 100%;
+	height: 600px;
+	margin-bottom: 30px;
+	.overlay {
+		.titulo {
+			color: #fff;
+			padding: 40px;
+			font-style: italic;
+		}
+	}
+	.text-center {
+		color: #fff;
+	}
+}
+.carousel-item {
+	display: flex;
+	justify-content: center;
+}

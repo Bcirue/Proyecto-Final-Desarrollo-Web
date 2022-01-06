@@ -1,0 +1,846 @@
+@charset "UTF-8";
+/* Variables: colores */
+/* MENÚ DE NAVEGACIÓN */
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap");
+.nav {
+  background: none;
+  height: 80px;
+  color: #fff;
+}
+
+.nav__container {
+  display: flex;
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  font-size: 3em;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.nav__item {
+  color: #fff;
+  text-decoration: none;
+  --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+.nav__item::after {
+  content: "";
+  display: block;
+  background: #fff;
+  width: 90%;
+  margin-top: 3px;
+  height: 3px;
+  clip-path: var(--clippy);
+  transition: clip-path 0.5s;
+}
+.nav__item:hover {
+  --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  color: #e4e4e4;
+  transition: color 0.2s;
+}
+
+.nav__menu {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 3em;
+}
+.nav__menu a {
+  text-transform: uppercase;
+}
+
+.nav__label {
+  display: none;
+}
+
+.nav__input {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .nav__label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav__menu {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: #1a1a1a;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: inset(0);
+    transition: clip-path 1s ease-in-out;
+    z-index: 4;
+  }
+
+  .nav__input:checked + .nav__menu {
+    clip-path: inset(0 0 100% 0);
+  }
+}
+/* Variables: colores */
+/*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+.container {
+  max-width: 1170px;
+  margin: auto;
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.footer {
+  margin-top: 30px;
+  background-color: #202020;
+  padding: 70px;
+  line-height: 1.5;
+  font-family: "Oswald", sans-serif;
+}
+.footer ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer__col {
+  width: 25%;
+}
+.footer__col ul {
+  list-style: none;
+}
+.footer__col ul li a {
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #b34f51;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.footer__col ul li a:hover {
+  color: #e4e4e4;
+  padding-left: 8px;
+}
+.footer__col h4 {
+  font-size: 18px;
+  color: #e4e4e4;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+}
+.footer__col h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #962c2e;
+  height: 2px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer__col .social-links a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: #4b4b4b;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #e4e4e4;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.footer__col .social-links a:hover {
+  color: #962c2e;
+  background-color: #e4e4e4;
+}
+
+@media (max-width: 767px) {
+  .footer__col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 574px) {
+  .footer__col {
+    width: 100%;
+  }
+}
+/* Variables: colores */
+/* RED TV */
+.red__tv {
+  background-color: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+}
+.red__tv .titulo {
+  font-style: italic;
+}
+
+.red__container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.red__container img {
+  width: 25%;
+  padding: 5px;
+  margin-bottom: 5px;
+  object-fit: cover;
+}
+
+.textos__container {
+  width: 50%;
+}
+.textos__container h3 {
+  margin-bottom: 15px;
+  color: #962c2e;
+  font-size: 22px;
+}
+.textos__container p {
+  padding: 0 0 5px 0;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: justify;
+}
+
+@media (max-width: 700px) {
+  .red__container img {
+    width: 25%;
+  }
+}
+/* Variables: colores */
+/* SECCIÓN MUSICA */
+.musica {
+  padding: 80px;
+  background: #521D1D;
+  background: -webkit-linear-gradient(to bottom, #190A05, #521D1D);
+  background: linear-gradient(to bottom, #190A05, #521D1D);
+}
+
+.discografia {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.imagen__musica {
+  width: 15%;
+  margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+}
+.imagen__musica > img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.imagen__musica:hover .hover__galeria {
+  transform: scale(1);
+}
+
+.hover__galeria {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  transform: scale(0);
+  background: rgba(80, 20, 20, 0.7);
+  transition: transform 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hover__galeria p {
+  color: #fff;
+}
+
+.musica__container .titulo {
+  color: #fff;
+  font-style: italic;
+  font-size: 45px;
+  margin-top: 20px;
+}
+
+/* Variables: colores */
+/* HEADER */
+header {
+  width: 100%;
+  height: 600px;
+  background: #a73737;
+  background: -webkit-linear-gradient(to right, rgba(123, 40, 40, 0.604), rgba(168, 56, 56, 0.631)), url(../images/red_taylor_concert.jpeg);
+  background: linear-gradient(to right, rgba(123, 40, 40, 0.604), rgba(168, 56, 56, 0.631)), url(../images/red_taylor_concert.jpeg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+header .textos__header {
+  display: flex;
+  height: 430px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.separador {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.textos__header h2 {
+  font-size: 45px;
+  color: #fff;
+}
+.textos__header h3 {
+  font-size: 20px;
+  font-weight: 350;
+  color: #fff;
+  border: 1px solid #e4e4e4;
+  padding: 9px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.textos__header h3:hover {
+  background-color: #e4e4e4;
+  color: #962c2e;
+}
+.textos__header a {
+  text-decoration: none;
+}
+.textos__header img {
+  width: 100%;
+  max-width: 200px;
+  padding: 10px;
+  margin: 20px 0;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+  filter: grayscale(100%);
+  transition: all 0.5s;
+}
+.textos__header img:hover {
+  filter: grayscale(0%);
+  transition: all 0.5s;
+}
+
+/* Variables: colores */
+/* VIDEO DESTACADO - SECCION */
+.video__destacado {
+  background: -webkit-linear-gradient(to right, rgba(123, 40, 40, 0.604), rgba(168, 56, 56, 0.631)), url(../images/red_taylor_concert_3.jpg);
+  background: linear-gradient(to right, rgba(123, 40, 40, 0.604), rgba(168, 56, 56, 0.631)), url(../images/red_taylor_concert_3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+  height: 600px;
+  margin-bottom: 30px;
+}
+.video__destacado .overlay .titulo {
+  color: #fff;
+  padding: 40px;
+  font-style: italic;
+}
+.video__destacado .text-center {
+  color: #fff;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* Variables: colores */
+/*--------------------------------------------------------------
+  # Contacto
+  --------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+}
+
+.contacto {
+  background: #521D1D;
+  background: -webkit-linear-gradient(to bottom, #190A05, #521D1D);
+  background: linear-gradient(to bottom, #190A05, #521D1D);
+}
+
+.contacto__container {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5em;
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contacto__container h2 {
+  color: #fff;
+  font-style: italic;
+  font-size: 45px;
+}
+.contacto__container h4 {
+  color: #fff;
+  font-style: italic;
+  font-size: 45px;
+}
+
+.contacto__grupo__texto > * {
+  padding: 1em;
+}
+
+.contact__form {
+  background: #202020;
+}
+.contact__form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  letter-spacing: 1.5px;
+}
+.contact__form form .block {
+  grid-column: 1/3;
+}
+.contact__form form p {
+  margin: 0;
+  padding: 1em;
+  color: #fff;
+}
+.contact__form form button {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #962c2e;
+  outline: none;
+  color: #fff;
+  max-width: 550px;
+  background: #962c2e;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em;
+}
+.contact__form form button:hover {
+  background: #521D1D;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+.contact__form form button:focus {
+  background: #521D1D;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0;
+}
+.contact__form form input {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #962c2e;
+  outline: none;
+  color: #fff;
+  max-width: 550px;
+}
+.contact__form form input .paises {
+  border: none;
+}
+.contact__form form .blanco {
+  width: 100%;
+  padding: 0.7em;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #962c2e;
+  outline: none;
+  color: #fff;
+  max-width: 550px;
+}
+
+.paises__container select {
+  max-width: 150px;
+}
+
+.contact__info {
+  background: #000;
+}
+.contact__info h4 {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+.contact__info p {
+  text-align: center;
+  margin: 0 0 1rem 0;
+}
+
+/* Pantallas grande */
+@media (min-width: 700px) {
+  .contacto__grupo__texto {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+  }
+  .contacto__grupo__texto > * {
+    padding: 2em;
+  }
+
+  .contact__info p {
+    padding: 1em;
+    text-align: left;
+  }
+}
+/* Variables: colores */
+/* Galeria */
+.galeria__container {
+  background: #521D1D;
+  background: -webkit-linear-gradient(to bottom, #190A05, #521D1D);
+  background: linear-gradient(to bottom, #190A05, #521D1D);
+}
+.galeria__container .titulo {
+  color: #fff;
+  font-style: italic;
+  font-size: 45px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  width: 95%;
+  margin: auto;
+  grid-gap: 10px;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.galeria img {
+  width: 100%;
+  vertical-align: top;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.galeria > a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+.galeria a:hover img {
+  filter: blur(2px);
+  transform: rotate(10deg) scale(1.3);
+}
+
+.light-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+}
+.light-box img {
+  width: 75vw;
+  max-height: 70vh;
+}
+.light-box:target {
+  transform: scale(1);
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: #962c2e;
+  color: #fff;
+  text-decoration: none;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+}
+
+.next {
+  display: block;
+  background: #962c2e;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fin, minmax(200px, 1fr));
+  }
+
+  .close {
+    top: 20px;
+    right: 20px;
+  }
+}
+/* Variables: colores */
+/* MÚSICA: ALBUMES */
+.album {
+  background: #521D1D;
+  background: -webkit-linear-gradient(to bottom, #190A05, #521D1D);
+  background: linear-gradient(to bottom, #190A05, #521D1D);
+}
+
+.album__container .titulo {
+  color: #fff;
+  font-style: italic;
+  font-size: 35px;
+}
+
+.container_spotify {
+  width: 100%;
+}
+
+/* Variables: colores */
+/* NOTICIAS */
+.noticias .titulo {
+  color: #fff;
+  font-style: italic;
+  font-size: 45px;
+}
+
+.post-list {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 15px;
+  background: #521D1D;
+  background: -webkit-linear-gradient(to bottom, #190A05, #521D1D);
+  background: linear-gradient(to bottom, #190A05, #521D1D);
+}
+
+.content-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.post-img-1 {
+  background: url(../images/ibytam.jpg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+}
+
+.post-img-2 {
+  background: url(../images/all_too_well.jpg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+}
+
+.post-img-3 {
+  background: url(../images/taylor_swift_red_cover.jpg);
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: 0.2s;
+}
+
+.post {
+  box-shadow: 0 1px 6px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.2s;
+  background: #fff;
+}
+.post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1px 14px 2px rgba(0, 0, 0, 0.15);
+}
+.post:hover .post-img-1 {
+  transform: scale(1.1);
+}
+.post:hover .post-img-2 {
+  transform: scale(1.1);
+}
+.post:hover .post-img-3 {
+  transform: scale(1.1);
+}
+
+.post-header {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.post-body {
+  padding: 15px;
+  text-align: center;
+}
+.post-body span {
+  display: inline-block;
+  color: #999;
+  margin-bottom: 10px;
+  font-style: italic;
+  font-size: 15px;
+}
+.post-body h2 {
+  margin-bottom: 15px;
+}
+.post-body p {
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #1a1a1a;
+}
+.post-body .post-link {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: #962c2e;
+  color: #fff;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+.post-body .post-link:hover {
+  background: #521D1D;
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 840px) {
+  .content-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .content-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+/* Variables: colores */
+/*--------------------------------------------------------------
+  # Sobre Mí 
+  --------------------------------------------------------------*/
+.sobre__mi {
+  background-color: #fff;
+  padding: 30px;
+  background: #521D1D;
+  background: -webkit-linear-gradient(to bottom, #190A05, #521D1D);
+  background: linear-gradient(to bottom, #190A05, #521D1D);
+}
+.sobre__mi .titulo {
+  color: #fff;
+  font-style: italic;
+  font-size: 45px;
+}
+
+.sobre__mi__container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sobre__mi__container img {
+  width: 25%;
+  padding: 5px;
+  margin-bottom: 5px;
+  object-fit: cover;
+}
+.sobre__mi__container .textos__container h3 {
+  color: #fff;
+  font-size: 30px;
+}
+.sobre__mi__container .textos__container .lead {
+  color: #fff;
+  margin: 25px;
+}
+
+.lead {
+  color: #b33e40;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+  letter-spacing: 0, 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #1a1a1a;
+  color: #b33e40;
+}
+
+.titulo {
+  color: #962c2e;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+}
+
+/*--/ Sections /--*/
+.sect-4 {
+  padding: 4rem 0;
+}
+
+.sect-pt4 {
+  padding-top: 4rem;
+}
+
+.sect-mt4 {
+  margin-top: 4rem;
+}
+
+/* MOBILE */
+@media screen and (max-width: 900px) {
+  header {
+    background-position: center;
+  }
+
+  /* MUSICA */
+  .imagen__musica {
+    width: 44%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

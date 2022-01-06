@@ -1,0 +1,19 @@
+@import '../base/colores';
+
+/* MÚSICA: ALBUMES */
+
+.album {
+	background: $rojo2;
+	background: -webkit-linear-gradient(to bottom, #190A05, $rojo2);
+	background: linear-gradient(to bottom, #190A05, $rojo2);
+}
+.album__container {
+	.titulo {
+		color: #fff;
+		font-style: italic;
+		font-size: 35px;
+	}
+}
+.container_spotify {
+	width: 100%;
+}

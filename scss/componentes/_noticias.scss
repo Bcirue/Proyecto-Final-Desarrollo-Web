@@ -1,0 +1,139 @@
+@import '../base/colores';
+
+
+/* NOTICIAS */
+
+
+.noticias {
+	.titulo {
+		color: #fff;
+		font-style: italic;
+		font-size: 45px;
+	}
+}
+.post-list {
+	display: flex;
+	min-height: 100vh;
+	align-items: center;
+	justify-content: center;
+	padding: 30px 15px;
+	background: $rojo2;
+	background: -webkit-linear-gradient(to bottom, #190A05, $rojo2);
+	background: linear-gradient(to bottom, #190A05, $rojo2);
+}
+.content-list {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+	max-width: 1000px;
+	margin: auto;
+}
+.post-img-1 {
+	background: url(../images/ibytam.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: .2s;
+}
+.post-img-2 {
+	background: url(../images/all_too_well.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: .2s;
+}
+.post-img-3 {
+	background: url(../images/taylor_swift_red_cover.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+	transition: .2s;
+}
+.post {
+	box-shadow: 0 1px 6px 1px rgba(0, 0, 0, .1);
+	overflow: hidden;
+	transition: .2s;
+	background: #fff;
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 1px 14px 2px rgba(0, 0, 0, .15);
+		.post-img-1 {
+			transform: scale(1.1);
+		}
+		.post-img-2 {
+			transform: scale(1.1);
+		}
+		.post-img-3 {
+			transform: scale(1.1);
+		}
+	}
+}
+.post-header {
+	width: 100%;
+	height: 200px;
+	overflow: hidden;
+	cursor: pointer;
+}
+.post-body {
+	padding: 15px;
+	text-align: center;
+	span {
+		display: inline-block;
+		color: #999;
+		margin-bottom: 10px;
+		font-style: italic;
+		font-size: 15px;
+	}
+	h2 {
+		margin-bottom: 15px;
+	}
+	p {
+		line-height: 1.5;
+		margin-bottom: 20px;
+		color: $negro;
+	}
+	.post-link {
+		display: block;
+		text-decoration: none;
+		padding: 10px;
+		background: $rojo;
+		color: #fff;
+		width: 50%;
+		margin: auto;
+		border-radius: 20px;
+		box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .1);
+		transition: .2s;
+		&:hover {
+			background: $rojo2;
+			box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, .2);
+			transform: translateY(-2px);
+		}
+	}
+}
+@media (max-width: 840px) {
+	.content-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+@media (max-width: 600px) {
+	.content-list {
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

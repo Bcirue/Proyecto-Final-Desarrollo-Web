@@ -1,0 +1,44 @@
+@import '../base/colores';
+
+/* RED TV */
+
+.red__tv {
+	background-color: #fff;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	padding: 30px;
+	.titulo {
+		font-style: italic;
+	}
+}
+.red__container {
+	display: flex;
+	justify-content: space-evenly;
+	img {
+		width: 25%;
+		padding: 5px;
+		margin-bottom: 5px;
+		object-fit: cover;
+	}
+}
+.textos__container {
+	width: 50%;
+	h3 {
+		margin-bottom: 15px;
+		color: $rojo;
+		font-size: 22px;
+	}
+	p {
+		padding: 0 0 5px 0;
+		font-weight: 300;
+		font-size: 20px;
+		text-align: justify;
+	}
+}
+@media (max-width: 700px) {
+	.red__container {
+		img {
+			width: 25%;
+		}
+	}
+}

@@ -1,0 +1,64 @@
+@import '../base/colores';
+
+/* HEADER */
+
+header {
+	width: 100%;
+	height: 600px;
+	background: #a73737;
+	background: -webkit-linear-gradient(to right, hsla(0, 51%, 32%, 0.604), hsla(0, 50%, 44%, 0.631)), url(../images/red_taylor_concert.jpeg);
+	background: linear-gradient(to right, hsla(0, 51%, 32%, 0.604), hsla(0, 50%, 44%, 0.631)), url(../images/red_taylor_concert.jpeg);
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	.textos__header {
+		display: flex;
+		height: 430px;
+		width: 100%;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		text-align: center;
+	}
+}
+.separador {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+.textos__header {
+	h2 {
+		font-size: 45px;
+		color: #fff;
+	}
+	h3 {
+		font-size: 20px;
+		font-weight: 350;
+		color: #fff;
+		border: 1px solid $blanco;
+		padding: 9px 20px;
+		text-transform: uppercase;
+		transition: all .3s ease-in-out;
+		cursor: pointer;
+		&:hover {
+			background-color: $blanco;
+			color: $rojo;
+		}
+	}
+	a {
+		text-decoration: none;
+	}
+	img {
+		width: 100%;
+		max-width: 200px;
+		padding: 10px;
+		margin: 20px 0;
+		box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+		filter: grayscale(100%);
+		transition: all 0.5s;
+		&:hover {
+			filter: grayscale(0%);
+			transition: all 0.5s;
+		}
+	}
+}

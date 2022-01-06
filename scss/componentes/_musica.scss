@@ -1,0 +1,59 @@
+@import '../base/colores';
+
+/* SECCIÓN MUSICA */
+
+.musica {
+	padding: 80px;
+	background: $rojo2;
+	background: -webkit-linear-gradient(to bottom, #190A05, $rojo2);
+	background: linear-gradient(to bottom, #190A05, $rojo2);
+}
+.discografia {
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+.imagen__musica {
+	width: 15%;
+	margin-bottom: 10px;
+	overflow: hidden;
+	position: relative;
+	cursor: pointer;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+	object-fit: cover;
+	>img {
+		width: 100%;
+		object-fit: cover;
+		display: block;
+	}
+	&:hover {
+		.hover__galeria {
+			transform: scale(1);
+		}
+	}
+}
+.hover__galeria {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	transform: scale(0);
+	background: rgba(80, 20, 20, 0.7);
+	transition: transform .5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	p {
+		color: #fff;
+	}
+}
+.musica__container {
+	.titulo {
+		color: #fff;
+		font-style: italic;
+		font-size: 45px;
+		margin-top: 20px;
+	}
+}
+
+

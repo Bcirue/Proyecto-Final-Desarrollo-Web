@@ -1,0 +1,71 @@
+@import 'componentes/nav';
+@import 'componentes/footer';
+@import 'componentes/red-tv';
+@import 'componentes/musica';
+@import 'componentes/header-index';
+@import 'componentes/video-destacado';
+@import 'componentes/contacto';
+@import 'componentes/galeria';
+@import 'componentes/albumes';
+@import 'componentes/noticias';
+@import 'componentes/sobre-mi';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: $negro;
+  color: #b33e40;
+  
+}
+
+.titulo {
+  color: $rojo;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 45px;
+  text-transform: uppercase;
+}
+
+
+
+/*--/ Sections /--*/
+.sect-4 {
+  padding: 4rem 0;
+}
+
+.sect-pt4 {
+  padding-top: 4rem;
+}
+
+.sect-mt4 {
+  margin-top: 4rem;
+}
+
+
+
+
+/* MOBILE */
+
+@media screen and (max-width:900px){
+  header{
+    background-position: center;
+  }
+
+
+  /* MUSICA */
+
+  .imagen__musica {
+    width: 44%;
+  }
+
+}
+
